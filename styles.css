@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
     list-style-type: none;
     box-sizing: border-box;
+    font-family: "Montserrat", serif;
 }
 
 img{
@@ -13,10 +16,12 @@ img{
 html{
     background-color: #52a7c1;
     background-image: linear-gradient(315deg, #52a7c1 0%, #b3f6d8 74%);
+    height: 100vh;
 }
 
 body{
-    height: 100vh;
+    height: 98vh;
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.438);
     border: 1px solid rgba(255, 255, 255, 0.418);
     border-radius: 30px;
@@ -27,6 +32,7 @@ body{
     height: 100%;
     display: grid;
     grid-template: 1fr / 1fr 3fr 1.5fr;
+    gap: 30px;
 }
 
 
@@ -43,6 +49,7 @@ body{
 
 .name-container{
     grid-area: name;
+    display: flex;
 }
 
 .side-panel-container{
@@ -54,19 +61,206 @@ body{
 .side-panel-container > div{
     display:flex;
     flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.side-panel-container > div > svg, .side-panel-container > div > p{
+.side-panel-container > div > img{
+    height: 40px;
+    width: 30px;
+}
+
+.side-panel-container > div > p{
     flex: 1;
+    font-size: smaller;
+    font-weight: 600;
 } 
 
 .github-logo-container{
     grid-area: github-logo;
+    display: flex;
+}
+
+.github-logo{
+    margin: 20px 20px;
+    height: 50px;
+    width: 50px;
 }
 
 .middle-section{
     display: grid;
-    grid-template: 1fr 6fr 2fr 1fr / 1fr;
+    grid-template: 1fr 5fr 1.5fr 1fr / 1fr;
+}
+
+.search-container{
+    display: flex;
+    background-color: rgb(228, 255, 249,0.9);
+    border-radius: 20px ;
+    height: 40px;
+    width: 300px;
+    align-items: center;
+}
+
+.search-icon{
+    margin-left: 20px;
+    margin-right: 20px;
+    height:25px;
+    width:25px;
+}
+
+.project-title-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-sub-title-cont{
+    display: flex;
+    height: 30px;
+    font-size: smaller;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-showcase-cont{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 70px;
+    padding: 30px;
+}
+
+.project{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.project > div > img{
+    height: 280px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.project > div + div{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project > div + div > p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.foot-logos-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.foot-logos-cont > img{
+    height: 18px;
+    width: 18px;
+}
+
+.foot-logos-cont > p{
+    color: rgb(255, 154, 123);
+}
+
+.event-dates-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-dates-title-cont{
+    display: flex;
+}
+
+.event-dates-title{
+    margin-right: auto;
+}
+
+.current-date-cont{
+    background-color: rgb(217, 245, 255);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.day-date-cont{
+    display: flex;
+    justify-content: space-around;
+}
+
+.day-dates{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 10px;
+    font-weight: 500;
+}
+
+.day{
+    font-size: 12px;
+    text-align: center;
+}
+
+.date{
+    text-align: center;
+    font-weight: 700;
+}
+
+.dot{
+    position: relative;
+    bottom: 10px;
+    color: rgb(0, 139, 204);
+}
+
+.highlighted-day-dates{
+    background-color: rgba(255, 91, 62, 0.827);
+    border-radius: 20px;
+    color: white;
+}
+
+.other-events-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.past-events-cont, .rewards-cont{
+    display: flex;
+    background-color: rgba(240, 251, 255, 0.67);
+    border-radius: 20px;
+    padding: 20px 10px;
+    gap: 15px;
+}
+
+.past-events-cont > img, .rewards-cont > img{
+    width: auto;
+    height: 60px;
+}
+
+.past-events-title-cont, .rewards-title-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.past-events-title, .rewards-title{
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.past-events-subtitle, .rewards-subtitle{
+    font-size: 10px;
 }
 
 .right-section{
